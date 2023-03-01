@@ -19,7 +19,7 @@ public class WordSearch {
             placeWord(wordChars, i);
         }
         fillGrid();
-    }
+    }//end of generate method
 
     public String toString() {
 
@@ -31,7 +31,7 @@ public class WordSearch {
             result += "\n";
         }
         return result;
-    }
+    }//end of toString method
 
     //generates solution grid
     public String toSolution() {
@@ -49,7 +49,7 @@ public class WordSearch {
             result += "\n";
         }
         return result;
-    }
+    }//end of toSolution method
 
     //randomly places words in grid both vertically, horizontally, and diagonally
     private void placeWord(char[][] wordChars, int iter) {
@@ -81,7 +81,7 @@ public class WordSearch {
                 }
             }
         }
-        else if(direction == 1){
+        else if(direction == 1) {
             boolean placed = false;
             int attempts = 0;
             while(!placed && attempts < 100){
@@ -121,7 +121,7 @@ public class WordSearch {
                 }
                 attempts++;
             }
-            if(placed){
+            if(placed) {
                 for(int x = 0 ; x < wordChars[iter].length ; x++){
                     grid[pos[0]][pos[1]] = wordChars[iter][x];
                     solution[pos[0]][pos[1]] = true;
